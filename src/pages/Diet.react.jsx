@@ -25,7 +25,7 @@ const options = {
 	method: 'GET',
 	headers: {
 		'Accept-Language': 'en',
-		'X-RapidAPI-Key': process.env.REACT_APP_RECIEPE_API_KEY,
+		'X-RapidAPI-Key': '56d8e3e6e8mshc69fa1c04ea9667p1df832jsnc23dfdf66bf3',
 		'X-RapidAPI-Host': 'edamam-recipe-search.p.rapidapi.com'
 	}
 };
