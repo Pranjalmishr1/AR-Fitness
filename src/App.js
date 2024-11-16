@@ -92,7 +92,7 @@ function App() {
             marginTop: { lg: 0, xs: "1rem" },
           }}
         >
-          <img src={logo} alt="logo" width="60%" />
+          <img src="https://cdn2.vectorstock.com/i/1000x1000/95/96/fitness-center-sport-logo-on-a-dark-background-vector-19859596.jpg" alt="logo" width="100px" />
         </Box>
         <Typography
           variant="h6"
