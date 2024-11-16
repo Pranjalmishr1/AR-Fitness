@@ -102,11 +102,7 @@ function App() {
             textAlign: "center",
           }}
         >
-          © 2021{" "}
-          <a href="/" className="link">
-            <span style={{ color: "#F15C26" }}>AR FITNESS </span>
-          </a>
-          All rights reserved.
+          Made with 💌 by Team (Gaurav, Omji, Pranjal, Priyansu)
         </Typography>
       </Container>
     </>
