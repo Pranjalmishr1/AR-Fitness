@@ -37,10 +37,6 @@ export const Home = () => {
   const photo = localStorage.getItem("photo");
 
   // // console.log(userObject);
-  if (!Cookies.get("userID")) {
-    alert("Please Login");
-    navigate("/");
-  }
   const [initialMeasuremnets, setInitialMeasuremnets] = useState("");
   const [goalsMeasuremnet, setGoalsMeasuremnets] = useState("");
   const [bicepsstartTimeCol, setBicepsStartTimeCol] = useState("");

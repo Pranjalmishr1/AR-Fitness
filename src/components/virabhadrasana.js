@@ -21,10 +21,6 @@ const speak = (count) => {
 
 const Virabhadrasana = () => {
   const navigate = useNavigate();
-  if (!Cookies.get("userID")) {
-    alert("Please Login");
-    navigate("/");
-  }
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
   let camera = null;
@@ -32,7 +28,7 @@ const Virabhadrasana = () => {
   var t = new Date().getTime();
 
   function onResult(results) {
-    if (results.poseLandmarks) {
+    if (results && results.poseLandmarks) {
       const position = results.poseLandmarks;
       canvasRef.current.width = webcamRef.current.video.videoWidth;
       canvasRef.current.height = webcamRef.current.video.videoHeight;

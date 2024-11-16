@@ -11,12 +11,13 @@ import { getStorage } from "firebase/storage";
 import { useNavigate } from "react-router-dom";
 
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-  authDomain: "ar-fitness3.firebaseapp.com",
-  projectId: "ar-fitness3",
-  storageBucket: "ar-fitness3.appspot.com",
-  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGE_ID,
-  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  apiKey: "AIzaSyCa7_5lplcKT7Le2YpgxYqf_R-IVOxUOg4",
+  authDomain: "project-e3464.firebaseapp.com",
+  projectId: "project-e3464",
+  storageBucket: "project-e3464.firebasestorage.app",
+  messagingSenderId: "898369928404",
+  appId: "1:898369928404:web:45c0c4868354d3150f0f41",
+  measurementId: "G-WSR86EGMH6"
 };
 
 // Initialize Firebase

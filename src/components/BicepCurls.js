@@ -30,10 +30,6 @@ const speak = (count) => {
 };
 const BicepCurls = () => {
   const navigate = useNavigate();
-  if (!Cookies.get("userID")) {
-    alert("Please Login");
-    navigate("/");
-  }
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
   let camera = null;
@@ -50,11 +46,13 @@ const BicepCurls = () => {
   }, []);
 
   function onResult(results) {
-    if (results.poseLandmarks) {
+    if (results && results.poseLandmarks) {
       const position = results.poseLandmarks;
       // console.log (position);
-      canvasRef.current.width = webcamRef.current.video.videoWidth;
-      canvasRef.current.height = webcamRef.current.video.videoHeight;
+      if(webcamRef.current && webcamRef.current.video){
+        canvasRef.current.width = webcamRef.current.video.videoWidth;
+        canvasRef.current.height = webcamRef.current.video.videoHeight;
+      }
 
       const width = canvasRef.current.width;
       const height = canvasRef.current.height;
@@ -260,16 +258,23 @@ const BicepCurls = () => {
       typeof webcamRef.current !== "undefined" &&
       webcamRef.current !== null
     ) {
-      camera = new cam.Camera(webcamRef.current.video, {
-        onFrame: async () => {
-          countTextbox.current.value = count;
-          //console.log(count, dir)
-          //console.log("hello",countTextbox.current.value)
-          await pose.send({ image: webcamRef.current.video });
-        },
-        width: 640,
-        height: 480,
-      });
+      if(webcamRef.current && webcamRef.current.video){
+        camera = new cam.Camera(webcamRef.current.video, {
+          onFrame: async () => {
+            if(countTextbox.current && countTextbox.current.value){
+              countTextbox.current.value = count;
+            }
+            //console.log(count, dir)
+            //console.log("hello",countTextbox.current.value)
+            if(webcamRef.current && webcamRef.current.video){
+              await pose.send({ image: webcamRef.current.video });
+            }
+            
+          },
+          width: 640,
+          height: 480,
+        });
+      }
       camera.start();
     }
   });

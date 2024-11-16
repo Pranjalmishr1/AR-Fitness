@@ -16,10 +16,6 @@ import { db } from "../firebase";
 
 const Trikonasana = () => {
   const navigate = useNavigate();
-  if (!Cookies.get("userID")) {
-    alert("Please Login");
-    navigate("/");
-  }
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
   let camera = null;
@@ -32,7 +28,7 @@ const Trikonasana = () => {
     speech.speak(object);
   };
   function onResult(results) {
-    if (results.poseLandmarks) {
+    if (results && results.poseLandmarks) {
       const position = results.poseLandmarks;
       canvasRef.current.width = webcamRef.current.video.videoWidth;
       canvasRef.current.height = webcamRef.current.video.videoHeight;
