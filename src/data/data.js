@@ -25,21 +25,21 @@ export const features = [
 export const testimonial = [
   {
     id: 1,
-    name: "Aditya Borkar",
+    name: "Pranjal Mishra",
     description:
       "Great application.. you can do your workout at home with correct form and counting.. so there is less chance to get injury.. I suggest everyone to use this app.. Thank you",
     role: "Fitness Trainer",
   },
   {
     id: 2,
-    name: "Sahil Bhavsar",
+    name: "Omji",
     description:
       "This app is amazing 😍 it's very beneficial for those who is not hiring trainer for workout at gym infact it's good 😊 and nice app",
     role: "Gym Trainee",
   },
   {
     id: 3,
-    name: "Omkar",
+    name: "Gaurav",
     description:
       "As an active gym person, sometime it gets very difficult to count our reps on a particular heavy set that too keeping a good form, this project will help to counter the issue. Also the body tracking feature makes it even more accurate to work on our form.",
     role: "Weight Lifter",

@@ -52,7 +52,7 @@ const Header = () => {
               width: { lg: "100%", md: "100%", sm: "100%", xs: "100%" },
             }}
           >
-            <img src={LogoWithText} alt="logo" width="100%"></img>
+            <img src="https://cdn2.vectorstock.com/i/1000x1000/95/96/fitness-center-sport-logo-on-a-dark-background-vector-19859596.jpg" alt="logo" width="100%"></img>
           </Box>
         </Link>
 
