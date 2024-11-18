@@ -161,7 +161,7 @@ const HomeHeader = ({ props }) => {
                   alignItems: { md: "center", sm: "center", xs: "center" },
                 }}
               >
-                <img src="https://cdn2.vectorstock.com/i/1000x1000/95/96/fitness-center-sport-logo-on-a-dark-background-vector-19859596.jpg" alt="logo" width="100px"></img>
+                <img src="https://cdn2.vectorstock.com/i/1000x1000/95/96/fitness-center-sport-logo-on-a-dark-background-vector-19859596.jpg" alt="logo" width="100px" height="100px"></img>
               </Box>
             </Link>
             <Box
